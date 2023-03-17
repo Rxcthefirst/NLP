@@ -23,7 +23,6 @@ signal_array = np.frombuffer(signal_wave, dtype=np.int16)
 
 times = np.linspace(0, t_audio, num=n_samples*2)  # modified by multiplying samples by 2 (channels?).
 
-
 plt.figure(figsize=(15, 5))
 plt.plot(times, signal_array)
 plt.title("Audio Signal")

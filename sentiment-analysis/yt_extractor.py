@@ -9,6 +9,7 @@ def get_video_info(url):
             url,
             download=False,
         )
+
     if "entries" in result:
         return result["entries"][0]
     return result

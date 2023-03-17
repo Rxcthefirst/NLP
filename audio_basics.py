@@ -1,6 +1,18 @@
 import wave
 
-obj = wave.open("sample.wav", "rb")
+
+
+def load_wav(file):
+    """
+    Utility function for loading a .wav file and using the built-n Python library to construct a new .wav
+    output file.
+    :param obj: object holding the binary data for the .wav file
+    """
+    obj = wave.open(file, "rb")
+    return obj
+
+
+obj = load_wav("sample.wav")
 
 print("Number of channels", obj.getnchannels())
 print("Sample width", obj.getsampwidth())
